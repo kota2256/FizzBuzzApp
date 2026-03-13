@@ -6,3 +6,11 @@
 	padding: 15px;
 	margin: auto;
 }
+
+#fizzbuzz {
+	color:deepskyblue;
+}
+
+#fizzbuzz.active{
+	color:gold;
+}

@@ -31,7 +31,7 @@
 					<th:block th:switch="${item.fizzbuzzResult}">
 						<td th:case="'Fizz'" th:text="*{item.fizzbuzzResult}" class="fw-bold"></td>
 						<td th:case="'Buzz'" th:text="*{item.fizzbuzzResult}" class="text-danger fw-bold"></td>
-						<td th:case="'FizzBuzz'" th:text="*{item.fizzbuzzResult}" class="text-primary fw-bold"></td>
+						<td th:case="'FizzBuzz'" th:text="*{item.fizzbuzzResult}" class="fw-bold" id="fizzbuzz"></td>
 						<td th:case="*" th:text="*{item.fizzbuzzResult}"></td>
 					</th:block>
 				</tr>
@@ -55,5 +55,18 @@
 	</div>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
+
+	<!-- FizzBuzz クリック文字変更 -->
+	<script>
+		const fizzbuzz = document.getElementById('fizzbuzz');		// HTML 要素の ID を指定して要素を取得するメソッド
+		
+		fizzbuzz.addEventListener('click', function(){
+			if(fizzbuzz.classList.contains("active")){
+				fizzbuzz.classList.remove('active');
+			} else {
+				fizzbuzz.classList.add('active');
+			}
+		});
+	</script>
+	</body>
 </html>
