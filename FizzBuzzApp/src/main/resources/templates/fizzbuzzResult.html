@@ -28,7 +28,12 @@
 				</tr>
 				<tr th:each="item : ${fizzbuzzResultList}">
 					<td th:text="${item.serialNum}"></td>
-					<td th:text="${item.fizzbuzzResult}"></td>
+					<th:block th:switch="${item.fizzbuzzResult}">
+						<td th:case="'Fizz'" th:text="*{item.fizzbuzzResult}" class="fw-bold"></td>
+						<td th:case="'Buzz'" th:text="*{item.fizzbuzzResult}" class="text-danger fw-bold"></td>
+						<td th:case="'FizzBuzz'" th:text="*{item.fizzbuzzResult}" class="text-primary fw-bold"></td>
+						<td th:case="*" th:text="*{item.fizzbuzzResult}"></td>
+					</th:block>
 				</tr>
 			</table>
 		</div>
