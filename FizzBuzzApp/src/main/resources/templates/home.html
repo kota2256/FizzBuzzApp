@@ -20,7 +20,7 @@
 			<!--数値入力欄-->
 			<div>
 				<label for="num">数値入力欄：</label>
-				<input type="number" id="num" name="num" class="form-control">
+				<input type="number" min="1" max="100" id="num" name="num" class="form-control" required>
 			</div>
 			<input type="submit" th:value="判定" class="btn btn-primary mt-3"></input>
 		</form>
