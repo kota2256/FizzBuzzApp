@@ -11,6 +11,12 @@
 		values(#{inputNum})
 	</insert>
 	
-	
+	<!-- 履歴取得 -->
+	<select id="findMany" resultType="InputNum">
+		SELECT *
+		FROM input_num
+		ORDER BY created_at DESC
+		LIMIT 3 OFFSET 1 
+	</select>
 	
 </mapper>
