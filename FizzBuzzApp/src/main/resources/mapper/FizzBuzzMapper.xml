@@ -11,6 +11,14 @@
 		values(#{inputNum})
 	</insert>
 	
+	<!-- 最新データ取得 -->
+	<select id="findOne" resultType="int">
+		SELECT input_num
+		FROM input_num
+		ORDER BY created_at DESC
+		LIMIT 1
+	</select>
+	
 	<!-- 履歴取得 -->
 	<select id="findMany" resultType="InputNum">
 		SELECT *

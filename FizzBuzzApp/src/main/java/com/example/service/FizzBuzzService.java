@@ -18,6 +18,11 @@ public class FizzBuzzService {
 		fizzbuzzMapper.insertOne(inputNum);
 	}
 	
+	// 直近データ取得
+	public int getOne() {
+		return fizzbuzzMapper.findOne();
+	}
+	
 	// 過去3件の履歴取得
 	public List<InputNum> getMany(){
 		return fizzbuzzMapper.findMany();

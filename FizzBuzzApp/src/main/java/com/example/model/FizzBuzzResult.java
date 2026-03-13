@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class FizzBuzzResult {
 
-	private int serialNum;
-	private String fizzbuzzResult;
+	private final int serialNum;
+	private final String fizzbuzzResult;
 	
 }
