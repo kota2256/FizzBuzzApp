@@ -58,14 +58,11 @@
 
 	<!-- FizzBuzz クリック文字変更 -->
 	<script>
-		const fizzbuzz = document.getElementById('fizzbuzz');		// HTML 要素の ID を指定して要素を取得するメソッド
-		
-		fizzbuzz.addEventListener('click', function(){
-			if(fizzbuzz.classList.contains("active")){
-				fizzbuzz.classList.remove('active');
-			} else {
-				fizzbuzz.classList.add('active');
-			}
+		const fizzbuzzList = document.querySelectorAll('#fizzbuzz');
+		fizzbuzzList.forEach(fizzbuzz => {
+			fizzbuzz.addEventListener('click', function(){
+				fizzbuzz.classList.toggle('active');
+			});
 		});
 	</script>
 	</body>
