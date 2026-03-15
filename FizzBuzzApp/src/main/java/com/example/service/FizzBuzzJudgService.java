@@ -11,13 +11,13 @@ public class FizzBuzzJudgService {
 
 	// FizzBuzzResult のリスト作成
 	public List<FizzBuzzResult> fizzbuzzResultList(int inputNum){
-		List<FizzBuzzResult> serialNum = new ArrayList<FizzBuzzResult>();
+		List<FizzBuzzResult> fizzbuzzResultList = new ArrayList<FizzBuzzResult>();
 		for (int i = inputNum;  i < (inputNum + 100); i++) {
-			String result = fizzbuzzResult(i);
-			FizzBuzzResult fbr = new FizzBuzzResult(i, result);
-			serialNum.add(fbr);
+			String result = this.fizzbuzzResult(i);
+			FizzBuzzResult fizzBuzzResult = new FizzBuzzResult(i, result);
+			fizzbuzzResultList.add(fizzBuzzResult);
 		}
-		return serialNum;
+		return fizzbuzzResultList;
 	}
 	
 	// FizzBuzz判定
